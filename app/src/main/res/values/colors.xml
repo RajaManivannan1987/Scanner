@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#99A2CE</color>
+    <color name="colorPrimaryDark">#91A5D5</color>
+    <color name="colorAccent">#5B70AB</color>
+    <color name="colorPrimaryLight">#cbd4fd</color>
+    <color name="transparentPrimaryColor">#A099A2CE</color>
+    <color name="transparent_black">#AA000000</color>
+    <color name="colorPrimaryTransparent">#8899A2CE</color>
+    <color name="light_gray_header_color">#646663</color>
+    <color name="default_screen_bg">#f9f9f9</color>
+    <color name="rounded_container_bg">#222222</color>
+    <color name="rounded_container_border">#3b3f44</color>
+</resources>

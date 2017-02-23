@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:id="@+id/cameraRecycleViewRelativeLayout"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/cameraRecycleViewImageView"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@color/colorPrimary"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cameraicon" />
+
+        <View
+            android:id="@+id/cameraRecycleViewViewImageView"
+            android:layout_width="25dp"
+            android:layout_height="75dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparentPrimaryColor" />
+
+        <TextView
+            android:id="@+id/cameraRecycleViewImageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:text="1"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cameraRecycleViewMultiSelectRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparentPrimaryColor"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/cameraRecycleViewMultiSelectCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/mainActivityBarImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/roundbar" />
+
+        <ImageButton
+            android:id="@+id/mainActivityHelpImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/mainActivityBarImageView"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/main_activity_image_button_background"
+            android:src="@drawable/helpicon" />
+
+        <ImageButton
+            android:id="@+id/mainActivitySettingsImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@id/mainActivityHelpImageButton"
+            android:background="@drawable/main_activity_image_button_background"
+            android:src="@drawable/settingsicon" />
+
+        <ImageButton
+            android:id="@+id/mainActivityCameraImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/main_activity_image_button_background"
+            android:src="@drawable/cameraicon" />
+
+        <ImageButton
+            android:id="@+id/mainActivityGalleryImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+
+            android:layout_marginTop="60dp"
+            android:layout_toLeftOf="@+id/mainActivityFolderImageButton"
+            android:background="@drawable/main_activity_image_button_background"
+            android:src="@drawable/galleryicon" />
+
+        <ImageButton
+            android:id="@+id/mainActivityFolderImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/mainActivityBarImageView"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/main_activity_image_button_background"
+            android:src="@drawable/foldericon" />
+    </RelativeLayout>
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:src="@drawable/main_page_logo"/>-->
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="@color/colorPrimary">-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_margin="5dp">-->
+                <!--<ImageButton-->
+                    <!--android:id="@+id/mainActivityGalleryImageButton"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@drawable/main_screen_gallery"-->
+                    <!--android:background="@drawable/main_activity_image_button_background"-->
+                    <!--android:layout_centerInParent="true"/>-->
+
+            <!--</RelativeLayout>-->
+            <!--<View-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_weight=".7"/>-->
+            <!--<RelativeLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_margin="5dp">-->
+                <!--<ImageButton-->
+                    <!--android:id="@+id/mainActivityHelpImageButton1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/main_activity_image_button_background"-->
+                    <!--android:src="@drawable/main_screen_info"-->
+                    <!--android:layout_centerInParent="true"/>-->
+            <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+        <!--<ImageButton-->
+            <!--android:id="@+id/mainActivityCameraImageButton"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/main_activity_image_button_background"-->
+            <!--android:src="@drawable/main_page_camera"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"/>-->
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

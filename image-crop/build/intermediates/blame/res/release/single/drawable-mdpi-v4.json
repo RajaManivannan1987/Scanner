@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\Raja\\New Folder\\D\\Android\\Scanner\\image-crop\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\cancel.png",
+        "source": "D:\\Raja\\New Folder\\D\\Android\\Scanner\\image-crop\\src\\main\\res\\drawable-mdpi\\cancel.png"
+    },
+    {
+        "merged": "D:\\Raja\\New Folder\\D\\Android\\Scanner\\image-crop\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\crop__ic_cancel.png",
+        "source": "D:\\Raja\\New Folder\\D\\Android\\Scanner\\image-crop\\src\\main\\res\\drawable-mdpi\\crop__ic_cancel.png"
+    },
+    {
+        "merged": "D:\\Raja\\New Folder\\D\\Android\\Scanner\\image-crop\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\crop__divider.9.png",
+        "source": "D:\\Raja\\New Folder\\D\\Android\\Scanner\\image-crop\\src\\main\\res\\drawable-mdpi\\crop__divider.9.png"
+    },
+    {
+        "merged": "D:\\Raja\\New Folder\\D\\Android\\Scanner\\image-crop\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ok_new.png",
+        "source": "D:\\Raja\\New Folder\\D\\Android\\Scanner\\image-crop\\src\\main\\res\\drawable-mdpi\\ok_new.png"
+    },
+    {
+        "merged": "D:\\Raja\\New Folder\\D\\Android\\Scanner\\image-crop\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\crop__ic_done.png",
+        "source": "D:\\Raja\\New Folder\\D\\Android\\Scanner\\image-crop\\src\\main\\res\\drawable-mdpi\\crop__ic_done.png"
+    }
+]

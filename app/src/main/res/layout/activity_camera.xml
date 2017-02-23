@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.scanner.scanner.activity.CameraActivity">
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/camera_flash_off"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@drawable/flashlightoff_icon"-->
+
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentRight="true"/>-->
+    <!--<ImageView-->
+    <!--android:id="@+id/camera_flash_on"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@drawable/flashlight_icon_on"-->
+
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:visibility="invisible"/>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center">-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/backButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@drawable/background_image_view"-->
+    <!--android:padding="10dp"-->
+    <!--android:src="@drawable/arrow_back_icon" />-->
+    <!--</LinearLayout>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_ChangeCamera"-->
+    <!--android:layout_width="72dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:text="Switch Camera"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/button_flash"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:src="@drawable/flashnew" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/gallery"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:src="@drawable/gallery_icon"-->
+    <!--android:text="" />-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/CameraActivityBottomToolBar"
+                layout="@layout/activity_camera_bottom_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+
+            <ImageView
+                android:id="@+id/button_capture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/camera_page_click" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/CameraActivityBottom1ToolBar"
+            layout="@layout/camera_page_menu"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/CameraActivityBottom2ToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@android:color/white">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cameraActivityRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="95dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:scrollbarSize="20dp"
+        android:visibility="gone" />
+</RelativeLayout>
+

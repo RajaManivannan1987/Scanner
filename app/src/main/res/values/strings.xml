@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Scan Rite</string>
+
+    <string-array name="doc_details_listview">
+        <item>A4</item>
+        <item>A3</item>
+        <item>A5</item>
+        <item>Business Card</item>
+        <item>Letter</item>
+    </string-array>
+    <string name="intent_share_save_to_gallery">com.example.scanner.scanner.ui.SaveToGallery</string>
+    <string name="intent_share_save_to_gallery_multiple">com.example.scanner.scanner.ui.SaveToGalleryMultiple</string>
+
+    <string name="share_preference_folder">folder</string>
+    <string name="share_pref_un_title">untitle</string>
+</resources>
