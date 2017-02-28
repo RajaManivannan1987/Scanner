@@ -10,6 +10,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp">
+
+        <ImageView
+            android:id="@+id/cameraPageBackIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/back_image" />
+
+        <TextView
+            android:id="@+id/cameraPageNextTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
     <!--<ImageView-->
     <!--android:id="@+id/camera_flash_off"-->
     <!--android:layout_width="wrap_content"-->
@@ -102,15 +127,16 @@
         <include
             android:id="@+id/CameraActivityBottom1ToolBar"
             layout="@layout/camera_page_menu"
-            android:visibility="gone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
         <LinearLayout
             android:id="@+id/CameraActivityBottom2ToolBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:background="@android:color/white">
+            android:background="@android:color/white"
+            android:visibility="gone">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/cameraActivityRecycleView"

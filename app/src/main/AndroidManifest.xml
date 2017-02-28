@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-feature
@@ -31,6 +32,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AboutActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.DocumentDetailsActivity"
@@ -62,6 +66,7 @@
             <intent-filter>
                 <action android:name="com.example.scanner.scanner.ui.SaveToGallery" />
                 <action android:name="com.example.scanner.scanner.ui.SaveToGalleryMultiple" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="image/*" />
             </intent-filter>

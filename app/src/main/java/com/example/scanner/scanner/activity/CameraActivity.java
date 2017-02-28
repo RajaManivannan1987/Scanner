@@ -62,6 +62,7 @@ public class CameraActivity extends AppCompatActivity implements OnStartDragList
     private int REQUEST_IMAGING = 513;
     private DatabaseAdapter databaseAdapter;
     private static TextView snapshotTextView, scannedTextView;
+    private TextView cameraPageNextTextView;
     String flashStatus = Camera.Parameters.FLASH_MODE_OFF;
     //    private TextView flashType;
     private int dataType = 1;//  1- Default location and 2- Scanned Location
@@ -70,14 +71,14 @@ public class CameraActivity extends AppCompatActivity implements OnStartDragList
     private boolean remove = true;
     private ImageView cameraFlash;
     private ImageView gallery;
-    private ImageView menuImageView;
+    private ImageView menuImageView, cameraPageBackIcon;
     private View toolbarOne;
     private LinearLayout toolbarTwo, menuFolderLinearLayout;
     private ItemTouchHelper mItemTouchHelper;
     private LinearLayout snapshotLinearLayout;
     private boolean reorderFlag = false;
     private List<DefaultLocationImagePath> recyclerViewList = new ArrayList<DefaultLocationImagePath>();
-    private Long folderId=0l;
+    private Long folderId = 0l;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -91,9 +92,12 @@ public class CameraActivity extends AppCompatActivity implements OnStartDragList
         toolbarOne = findViewById(R.id.CameraActivityBottom1ToolBar);
         toolbarTwo = (LinearLayout) findViewById(R.id.CameraActivityBottom2ToolBar);
         menuFolderLinearLayout = (LinearLayout) findViewById(R.id.cameraActivityRearrangeLinearLayout);
-        folderId=getIntent().getLongExtra(Global.folderId,0l);
-        if(getIntent().getExtras()!=null){
-            if(getIntent().getExtras().getBoolean("gallery")){
+        cameraPageBackIcon = (ImageView) findViewById(R.id.cameraPageBackIcon);
+        cameraPageNextTextView = (TextView) findViewById(R.id.cameraPageNextTextView);
+
+        folderId = getIntent().getLongExtra(Global.folderId, 0l);
+        if (getIntent().getExtras() != null) {
+            if (getIntent().getExtras().getBoolean("gallery")) {
                 Intent intent = new Intent(CameraActivity.this, MultiImageSelectorActivity.class);
                 // whether show camera
                 intent.putExtra(MultiImageSelectorActivity.EXTRA_SHOW_CAMERA, false);
@@ -166,6 +170,27 @@ public class CameraActivity extends AppCompatActivity implements OnStartDragList
                 }
             }
         });
+        cameraPageNextTextView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (toolbarTwo.getVisibility() != View.VISIBLE || dataType != 1) {
+                    dataType = 1;
+                    if (databaseAdapter.getSizeDefaultLocation() > 0)
+                        toolbarTwo.setVisibility(View.VISIBLE);
+                    else
+                        toolbarTwo.setVisibility(View.GONE);
+                    refreshImageGallery(false, dataType);
+                } else {
+                    toolbarTwo.setVisibility(View.GONE);
+                }
+            }
+        });
+        cameraPageBackIcon.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         gallery.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -187,19 +212,19 @@ public class CameraActivity extends AppCompatActivity implements OnStartDragList
                     DefaultLocationImagePath path = databaseAdapter.getDefaultLast();
                     intent.putExtra("path", path.getPath());
                     intent.putExtra("key", path.getKey());
-                    intent.putExtra(Global.folderId,folderId);
+                    intent.putExtra(Global.folderId, folderId);
                     startActivity(intent);
                     cropFlag = true;
                 } else {
                     refreshImageGallery(false, dataType);
                     if (databaseAdapter.getSizeScannedLocation() > 0) {
-                        if(folderId==0l) {
+                        if (folderId == 0l) {
                             startActivity(new Intent(CameraActivity.this, DocumentDetailsActivity.class));
-                        }else{
+                        } else {
                             databaseAdapter.updateFolderForScannedLocation(folderId);
                             finish();
                         }
-                    }else
+                    } else
                         startActivity(new Intent(CameraActivity.this, FolderListActivity.class));
                 }
             }

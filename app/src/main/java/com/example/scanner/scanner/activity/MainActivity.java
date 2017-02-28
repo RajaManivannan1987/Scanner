@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         helpImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toast.show();
+                //toast.show();
                 Animation helpAnimation = blinkAnimation();
                 helpAnimation.setAnimationListener(new Animation.AnimationListener() {
                     @Override
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
-                        ;
+                        startActivity(new Intent(MainActivity.this, AboutActivity.class));
                     }
 
                     @Override
